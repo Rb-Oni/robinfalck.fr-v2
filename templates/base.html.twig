@@ -17,7 +17,7 @@
 <body>
 
 {#{% if app.user %}#}
-{#    {% include "layouts/navbar.html.twig" %}#}
+{#    {% include "layouts/navbar.error404.html.twig" %}#}
 {#{% endif %}#}
 
 {#{% if app.user and app.user.isVerified == false %}#}
@@ -31,7 +31,7 @@
 {#    </div>#}
 {#{% endif %}#}
 
-{#{% include "components/flash.html.twig" %}#}
+{#{% include "components/flash.error404.html.twig" %}#}
 
 {% block body %}{% endblock %}
 
