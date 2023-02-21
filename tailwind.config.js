@@ -2,7 +2,12 @@
 module.exports = {
 	content: ['./templates/**/*.html.twig'],
 	theme: {
-		extend: {},
+		extend: {
+			colors: {
+				'green': '#00BFA5',
+				'black': '#191919',
+			}
+		},
 	},
 	plugins: [],
 }
