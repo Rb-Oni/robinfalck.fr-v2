@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
-    <link rel="icon"
-          href="{{ asset('/img/logo.jpg') }}">
+    <link rel="icon" href="{{ asset('/img/logo.jpg') }}">
+
     {% block stylesheets %}
         {{ encore_entry_link_tags('app') }}
     {% endblock %}
@@ -18,7 +18,7 @@
     {% endblock %}
 </head>
 
-<body class="bg-black selection:bg-green">
+<body class="bg-black selection:bg-green selection:text-white">
 
 {% include "_partials/_navbar.html.twig" %}
 
