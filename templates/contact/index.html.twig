@@ -10,13 +10,13 @@
         <div class="flex flex-wrap justify-between text-white invisible lg:visible">
             <a href="tel:0648526812" class="font-semibold group">
                 <svg xmlns="http://www.w3.org/2000/svg"
-                     class="h-5 w-5 inline text-green text-green group-hover:text-greenh" viewBox="0 0 20 20"
+                     class="h-5 w-5 inline text-greenc text-greenc group-hover:text-greenh" viewBox="0 0 20 20"
                      fill="currentColor">
                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
                 </svg>
                 06 48 52 68 12</a>
             <a href="mailto:robin.falck57@gmail.com" class="font-semibold group">robin.falck57@gmail.com
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline text-green group-hover:text-greenh"
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline text-greenc group-hover:text-greenh"
                      viewBox="0 0 20 20"
                      fill="currentColor">
                     <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
@@ -29,15 +29,17 @@
     <section class="container mx-auto px-5 lg:px-0 mb-16 w-screen lg:w-1/3">
 
         {% if success is defined %}
-            <div class="alert alert-success mt-4" id="contactSuccess">
-                <strong>Succès !</strong> Votre message a bien été envoyé.
+            <div class="bg-greenc border-l-4 border-greenh text-white p-4 my-5" role="alert">
+                <p class="font-bold">Succès !</p>
+                <p class="font-semibold">Votre message a bien été envoyé.</p>
             </div>
         {% endif %}
 
         {% if errors is defined %}
-            <div class="alert alert-danger mt-4" id="contactError">
-                <strong>Erreur !</strong> Une erreur est survenue.
-                <span class="text-1 mt-2 d-block" id="mailErrorMessage">
+            <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 my-5" role="alert">
+                <p class="font-bold">Erreur !</p>
+                <p class="font-semibold">Une erreur est survenue.</p>
+                <span class="mt-2">
                             {% for error in errors %}
                                 {{ error }}
                                 {% if not loop.last %}<br>{% endif %}
@@ -46,7 +48,7 @@
             </div>
         {% endif %}
 
-            {{ form_start(contactForm) }}
+        {{ form_start(contactForm) }}
 
         <div class="text-center font-semibold flex flex-col">
             {{ form_label(contactForm.email) }}
@@ -62,7 +64,7 @@
                 {{ form_row(contactForm.submit) }}
             </div>
         </div>
-            {{ form_end(contactForm) }}
+        {{ form_end(contactForm) }}
     </section>
 
 {% endblock %}

@@ -17,11 +17,11 @@
         </div>
         <nav :class="{'flex': open, 'hidden': !open}"
              class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
-            <a class="hover:text-green focus:text-green font-bold text-2xl ease-in duration-150 md:mt-0 md:ml-4 {% if app.request.attributes.get('_route') == 'app_home' %}text-green{% endif %}"
+            <a class="hover:text-greenc focus:text-greenc font-bold text-2xl ease-in duration-150 md:mt-0 md:ml-4 {% if app.request.attributes.get('_route') == 'app_home' %}text-greenc{% endif %}"
                href="{{ path('app_home') }}">MES PROJETS</a>
-            <a class="hover:text-green focus:text-green font-bold text-2xl ease-in duration-150 md:mt-0 md:ml-4 {% if app.request.attributes.get('_route') == 'app_about' %}text-green{% endif %}"
+            <a class="hover:text-greenc focus:text-greenc font-bold text-2xl ease-in duration-150 md:mt-0 md:ml-4 {% if app.request.attributes.get('_route') == 'app_about' %}text-greenc{% endif %}"
                href="{{ path('app_about') }}">À PROPOS</a>
-            <a class="hover:text-green focus:text-green font-bold text-2xl ease-in duration-150 md:mt-0 md:ml-4 {% if app.request.attributes.get('_route') == 'app_contact' %}text-green{% endif %}"
+            <a class="hover:text-greenc focus:text-greenc font-bold text-2xl ease-in duration-150 md:mt-0 md:ml-4 {% if app.request.attributes.get('_route') == 'app_contact' %}text-greenc{% endif %}"
                href="{{ path('app_contact') }}">CONTACT</a>
         </nav>
     </div>
