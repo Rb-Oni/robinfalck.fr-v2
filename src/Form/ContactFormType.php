@@ -60,7 +60,7 @@ class ContactFormType extends AbstractType
             ])
             ->add('submit', SubmitType::class, [
                 'attr' => [
-                    'class' => 'text-3xl font-bold bg-green hover:bg-white hover:text-black mt-10 text-white py-3 px-6 ease-in duration-150',
+                    'class' => 'text-3xl font-bold bg-greenc hover:bg-white hover:text-black mt-10 text-white py-3 px-6 ease-in duration-150',
                 ],
                 'label' => 'ENVOYER',
             ]);
